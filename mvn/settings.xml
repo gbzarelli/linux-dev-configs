@@ -1,0 +1,57 @@
+<!-- 
+Links uteis: 
+http://maven.apache.org/guides/mini/guide-encryption.html
+http://maven.apache.org/plugins/maven-deploy-plugin/usage.html
+-->
+<settings>
+    <!-- Configuracoes de autenticacao de servidores. 
+	(Antes de gerar a senha com criptografada, lembre de ter gerado o arquivo settings-security.xml)
+	 Executar o seguinte comando para gerar a senha do servidor:
+         mvn - -encrypt-password <sua_senha>
+    --> 
+    <servers>
+        <server>
+            <id>maven-criar-objects</id>
+            <username>xxxUseRxxx</username>
+            <password>xxxxxxx</password>
+        </server>
+	 <server>
+            <id>maven-criar-libs</id>
+            <username>xxxUseRxxx</username>
+            <password>xxxxxxx</password>
+        </server>
+    </servers>
+
+    <!-- 
+        Define um profile com um repositorio para download já configurado.
+        Esse repositorio não é utilizado para deploy apenas para baixar os projetos.
+        
+        Para deploy inserir em seu pom.xml:
+        <distributionManagement>
+            <repository>
+                <id>maven-criar-objects</id>
+                <name>maven-criar-objects</name>
+                <url>http://143.125.232.199:5858/repository/maven-criar-objects/</url>
+            </repository>
+        </distributionManagement>
+    -->
+    <profiles>
+        <profile>
+            <id>grupo-criar</id>
+            	<repositories>
+			<repository>
+			    <id>maven-criar-objects</id>
+			    <url>http://143.125.232.199:5858/repository/maven-criar-objects/</url>
+			</repository>
+			<repository>
+			    <id>maven-criar-libs</id>
+			    <url>http://143.125.232.199:5858/repository/maven-criar-libs/</url>
+			</repository>
+		</repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>grupo-criar</activeProfile>
+    </activeProfiles>
+
+</settings>

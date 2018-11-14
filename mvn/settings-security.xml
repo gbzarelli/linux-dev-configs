@@ -1,0 +1,8 @@
+<!-- 
+ Para gerar a senha master utilizar o comando: 
+  $mvn  - -encrypt-master-password <sua_senha>
+-->
+
+<settingsSecurity>
+  <master>xxxxxxxxxxxxxx</master>
+</settingsSecurity>

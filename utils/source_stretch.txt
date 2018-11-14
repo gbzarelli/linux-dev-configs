@@ -1,0 +1,19 @@
+#################################################################################
+#                            Repositórios Oficiais                              #
+#################################################################################
+
+deb http://ftp.br.debian.org/debian/ stretch main contrib non-free
+# deb-src http://ftp.br.debian.org/debian/ stretch main contrib non-free
+
+deb http://ftp.br.debian.org/debian/ stretch-updates main contrib non-free
+# deb-src http://ftp.br.debian.org/debian/ stretch-updates main contrib non-free
+
+deb http://security.debian.org/ stretch/updates main contrib non-free
+# deb-src http://security.debian.org/ stretch/updates main contrib non-free
+
+## Debian Stretch Backports
+deb http://ftp.br.debian.org/debian stretch-backports main contrib non-free
+deb-src http://ftp.br.debian.org/debian stretch-backports main contrib non-free
+
+#################################################################################
+

@@ -1,0 +1,39 @@
+// Alterar o myUser e myPass para seu usuario e senha do repo Maven CRIAR
+
+ext.repoCriarUser = 'myUser'
+ext.repoCriarPass = 'myPass'
+
+allprojects {
+    repositories {
+        mavenLocal()
+
+        maven { url "http://dl.bintray.com/populov/maven" }
+        maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/' }
+
+        maven {
+            url "http://143.125.232.199:5858/repository/maven-criar-libs/"
+            credentials{
+                username = repoCriarUser
+                password = repoCriarPass
+            }
+        }
+        maven {
+            url "http://143.125.232.199:5858/repository/maven-criar-libs-android/"
+            credentials{
+                username = repoCriarUser
+                password = repoCriarPass
+            }
+        }
+        maven {
+            url "http://143.125.232.199:5858/repository/maven-criar-objects/"
+            credentials{
+                username = repoCriarUser
+                password = repoCriarPass
+            }
+        }
+
+        jcenter()
+        google()
+    }
+}
+

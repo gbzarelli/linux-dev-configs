@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+    <groupId>br.com.test</groupId>
+    <artifactId>RossObjetos</artifactId>
+    <version>1.0.0</version>
+        
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>br.com.test</groupId>
+            <artifactId>LibDb4Java</artifactId>
+            <version>1.0.0</version>
+        </dependency>      
+    </dependencies>
+  
+    <distributionManagement>
+        <repository>
+            <id>maven-criar-objects</id>
+            <name>maven-criar-objects</name>
+            <url>http://143.125.232.199:5858/repository/maven-criar-objects/</url>
+        </repository>
+    </distributionManagement>
+    
+</project>
