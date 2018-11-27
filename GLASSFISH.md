@@ -9,6 +9,6 @@
 # HABILITAR ADMIN REMOTO (Secure Admin must be enabled to access the DAS remotely)
 	./glassfish/bin/asadmin enable-secure-admin
 
-#INICAR E PARAR SERVIÇO:
+# INICAR E PARAR SERVIÇO:
 	./glassfish/bin/asadmin stop-domain
 	./glassfish/bin/asadmin start-domain
