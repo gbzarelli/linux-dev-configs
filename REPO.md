@@ -1,28 +1,31 @@
-#1 - Repositorios Java:
+# 1 - Repositorios Java:
 
 	Git: 					http://143.125.232.199:8089/
 	Maven:					http://143.125.232.199:5858
 	SVN (Projetos não migrados para o GIT): http://143.125.232.2/repositorios/ProjetosJava
 	SVN (Projetos antigos): 		http://143.125.232.2/repositorios/ProjetosJavaOld
 
-#2 - Configurar o Maven:
+# 2 - Configurar o Maven:
 
-	- Instalar o mvn
-	    $apt-get install maven
+- Instalar o mvn
 
-	- Criar a pasta .m2 no home do usuario
+	$apt-get install maven
 
-	- Copiar o arquivo mvn/settings-security.xml para a pasta .m2
+- Criar a pasta .m2 no home do usuario
 
-	- Rodar o comando abaixo com uma senha para o 'mvn' e copiar o valor com as { } para dentro do arquivo "settings-security.xml"
-		$mvn  --encrypt-master-password <sua_senha>
+- Copiar o arquivo mvn/settings-security.xml para a pasta .m2
 
-	- Copiar o arquivo mvn/settings.xml para a pasta .m2
+- Rodar o comando abaixo com uma senha para o 'mvn' e copiar o valor com as { } para dentro do arquivo `settings-security.xml`
 
-	- Rodar o comando abaixo e copiar o valor com as { } para os locais indicados dentro do arquivo "settings.xml", alterar o usuário nos lugares indicados
-		$mvn - -encrypt-password <senha_usuario_do_maven>
+	$mvn  --encrypt-master-password <sua_senha>
 
-	- Para deploy segue o pom.xml de exemplo.
+- Copiar o arquivo mvn/settings.xml para a pasta .m2
+
+- Rodar o comando abaixo e copiar o valor com as { } para os locais indicados dentro do arquivo `settings.xml`, alterar o usuário nos lugares indicados
+		
+	$mvn --encrypt-password <senha_usuario_do_maven>
+
+- Para deploy segue o pom.xml de exemplo.
 
 	    Para deploy inserir em seu pom.xml:
 	    <distributionManagement>
@@ -33,4 +36,4 @@
 		</repository>
 	    </distributionManagement>
 
-	- Para Android colocar o arquivo mvn/init.gradle na pasta ~/.gradle (Configurar usuario e senha dentro do arquivo)
+- Para projetos que utilizam o gradle colocar o arquivo mvn/init.gradle na pasta ~/.gradle (Configurar usuario e senha dentro do arquivo)
