@@ -13,7 +13,7 @@
 	docker run --detach \
 	    --hostname 'localhost' \
 	    --restart=always
-	    --name gitlab_criar \
+	    --name helpdev_gitlab \
 	    --publish 8089:80 \
 	    --volume /opt/repositories/gitlab/config:/etc/gitlab \
 	    --volume /opt/repositories/gitlab/logs:/var/log/gitlab \
@@ -36,12 +36,12 @@
 		Obs: Restaure o backup sempre na mesma versão do gitlab.
 
 	Para inserir na CRON: (EXECUÇÃO AS 18:30, todos os dias)
-		30 18   * * *   root    docker exec gitlab_criar gitlab-rake gitlab:backup:create CRON=1
+		30 18   * * *   root    docker exec helpdev_gitlab gitlab-rake gitlab:backup:create CRON=1
 
 # Upgrade GitLab:
 	1 - Esteja com o ambiente todo configurado. E rodando.
 	2 - Faça um backup para segurança
-	3 - docker stop gitlab_criar : docker rm gitlab_criar
+	3 - docker stop helpdev_gitlab : docker rm helpdev_gitlab
 	4 - Execute o comando para criar o docker. Assim ele pega a ultima versão e mantem os diretorios.
 
 
