@@ -1,14 +1,3 @@
-# Docker no Slackware
-
-	Para instalar o Docker e o Docker Composer no Slackware 14.1:
-
-	wget https://packages.slackonly.com/pub/packages/14.1-x86_64/system/docker/docker-1.8.2-x86_64-1_slack.txz
-	upgradepkg --install-new docker-1.8.2-x86_64-1_slack.txz
-
-	sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-	https://docs.slackware.com/howtos:cloud:docker?do=export_pdf
-
 # Create GITLAB:
 	docker run --detach \
 	    --hostname 'localhost' \
